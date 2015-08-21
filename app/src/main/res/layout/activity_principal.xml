@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Principal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESPOSTA"
+        android:textColor="@color/accent_material_light"
+        android:textSize="30dp"
+        android:id="@+id/txResposta"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Primeiro Valor"
+        android:id="@+id/textView"
+        android:layout_below="@+id/txResposta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edPrimeiro_valor"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Segundo Valor"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/edPrimeiro_valor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edSegundo_valor"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:gravity="right"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSoma"
+        android:src="@mipmap/adicao"
+        android:text="Soma"
+        android:layout_below="@+id/edSegundo_valor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:onClick="onClick"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSubtracao"
+        android:src="@mipmap/subtracao"
+        android:layout_alignBottom="@+id/btSoma"
+        android:layout_toRightOf="@+id/btSoma"
+        android:layout_toEndOf="@+id/btSoma"
+        android:onClick="onClick"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btDivisao"
+        android:src="@mipmap/dovosao"
+        android:layout_alignBottom="@+id/btSubtracao"
+        android:layout_toRightOf="@+id/btSubtracao"
+        android:layout_toEndOf="@+id/btSubtracao"
+        android:onClick="onClick"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btMultiplicacao"
+        android:src="@mipmap/multiplicacao"
+        android:layout_alignBottom="@+id/btDivisao"
+        android:layout_toRightOf="@+id/btDivisao"
+        android:layout_toEndOf="@+id/btDivisao"
+        android:onClick="onClick"/>
+
+</RelativeLayout>
